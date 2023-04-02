@@ -26,7 +26,8 @@
   updating, and using various tools, while offering a customized installation process that
   seamlessly configures your host environment to meet your package requirements.
   With Nightcap, you can easily set package parameters, and generate custom reports and
-  reporting templates for all packages, including those that don't natively offer reporting options.
+  reporting templates for all packages, including those that don't natively
+  offer reporting options.
 ```
 
 ## Why Nightcap?
