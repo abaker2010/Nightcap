@@ -21,7 +21,12 @@
 ## Overview
 
 ```
-  Nightcap is a comprehensive tool designed to simplify the usage, integration, and deployment of essential tools, regardless of your workflow. It eliminates the hassle of installing, updating, and using various tools, while offering a customized installation process that seamlessly configures your host environment to meet your package requirements. With Nightcap, you can easily set package parameters, and generate custom reports and reporting templates for all packages, including those that don't natively offer reporting options.
+  Nightcap is a comprehensive tool designed to simplify the usage, integration, and deployment
+  of essential tools, regardless of your workflow. It eliminates the hassle of installing,
+  updating, and using various tools, while offering a customized installation process that
+  seamlessly configures your host environment to meet your package requirements.
+  With Nightcap, you can easily set package parameters, and generate custom reports and
+  reporting templates for all packages, including those that don't natively offer reporting options.
 ```
 
 ## Why Nightcap?
