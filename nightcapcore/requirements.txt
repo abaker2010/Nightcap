@@ -1,0 +1,9 @@
+wheel==0.38.2
+docker==6.0.1
+colorama==0.4.4
+configparser==5.0.1
+pathlib==1.0.1
+tinydb==4.3.0
+json5==0.9.5
+pgpy==0.5.4
+dict-hash==1.1.29

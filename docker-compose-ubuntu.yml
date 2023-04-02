@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  ubuntu:
+    networks:
+      - main_network
+    build:
+      context: .
+      dockerfile: Dockerfile-Ubuntu
+    container_name: nightcapubuntu
+    hostname: ncubuntu.local
+    restart: always
+    command: [ "sleep", "infinity" ]
+    ports:
+      - '27018:27018'

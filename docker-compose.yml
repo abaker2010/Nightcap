@@ -1,0 +1,26 @@
+version: "3.8"
+
+x-service-volumes:
+  &service-volumes
+  - ./:/app/:rw,cached
+
+services:
+  mongodb:
+    networks:
+      - main_network
+    image: mongo:latest
+    container_name: nightcapmongodb
+    hostname: ncmongo.local
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: mongodbadmin
+      MONGO_INITDB_ROOT_PASSWORD: secret
+      MONGO_INITDB_DATABASE: nightcap
+      HTTPINTERFACE: True
+    ports:
+      - 27017:27017
+    volumes:
+      - ./mongo_seeding/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+
+networks:
+  main_network:
+    driver: bridge

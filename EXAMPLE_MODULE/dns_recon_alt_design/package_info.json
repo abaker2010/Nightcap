@@ -1,0 +1,390 @@
+{
+    "author": {
+        "first_name": "Aaron",
+        "last_name": "Baker",
+        "github_url": "https://github.com/abaker2010",
+        "personal_site": "None"
+    },
+    "package_information": {
+        "package_name": "dnsrecon-alt-report",
+        "package_type": "red-team",
+        "version": "1.0",
+        "date": "06/25/2021",
+        "imports": null,
+        "details": "DNSRecon Wrapper - Using Alternative report style.",
+        "entry_file": "dnsrecon.py",
+        "language": {
+            "language": "python",
+            "version": "3.8",
+            "env_name": "dns_recon-alt_3-8",
+            "requirements_file": "requirements.txt",
+            "requirements": {}
+        },
+        "github": {
+            "url": "https://github.com/darkoperator/dnsrecon.git",
+            "commit_id": null
+        },
+        "entry_file_optional_params": {
+            "0": {
+                "name": "domain",
+                "value": "None",
+                "corresponding_flag": "-d",
+                "description": "Domain",
+                "param_needed": true,
+                "required": true,
+                "default": "None"
+            },
+            "1": {
+                "name": "ns_server",
+                "value": "None",
+                "corresponding_flag": "-n",
+                "description": "NS Server",
+                "param_needed": true,
+                "required": false,
+                "default": "None"
+            },
+            "2": {
+                "name": "range",
+                "value": "None",
+                "corresponding_flag": "-r",
+                "description": "IP Range",
+                "param_needed": true,
+                "required": false,
+                "default": "None"
+            },
+            "3": {
+                "name": "dictionary",
+                "value": "None",
+                "corresponding_flag": "-D",
+                "description": "Dictionary file of subdomain and hostnames to use for brute force",
+                "param_needed": true,
+                "required": false,
+                "default": "None"
+            },
+            "4": {
+                "name": "filiter",
+                "value": "None",
+                "corresponding_flag": "-f",
+                "description": "Filter out of brute force domain lookup, records that resolve to the wildcard defined IP address when saving records.",
+                "param_needed": true,
+                "required": false,
+                "default": "None"
+            },
+            "5": {
+                "name": "type",
+                "value": "None",
+                "corresponding_flag": "-t",
+                "description": "Type of enumeration to perform.",
+                "param_needed": true,
+                "required": false,
+                "default": "None"
+            },
+            "6": {
+                "name": "axfr",
+                "value": "None",
+                "corresponding_flag": "-a",
+                "description": "Perform AXFR with standard enumeration.",
+                "param_needed": false,
+                "required": false,
+                "default": "None"
+            },
+            "7": {
+                "name": "reverse_lookup",
+                "value": "None",
+                "corresponding_flag": "-s",
+                "description": "Perform a reverse lookup of IPv4 ranges in the SPF record with standard enumeration.",
+                "param_needed": false,
+                "required": false,
+                "default": "None"
+            },
+            "8": {
+                "name": "google",
+                "value": "None",
+                "corresponding_flag": "-g",
+                "description": "Perform Google enumeration with standard enumeration.",
+                "param_needed": false,
+                "required": false,
+                "default": "None"
+            },
+            "10": {
+                "name": "crt_enum",
+                "value": "None",
+                "corresponding_flag": "-k",
+                "description": "Perform crt.sh enumeration with standard enumeration.",
+                "param_needed": false,
+                "required": false,
+                "default": "None"
+            },
+            "11": {
+                "name": "whois_lookup",
+                "value": "None",
+                "corresponding_flag": "-w",
+                "description": "Perform deep whois record analysis and reverse lookup of IP ranges found through Whois when doing a standard enumeration.",
+                "param_needed": false,
+                "required": false,
+                "default": "None"
+            },
+            "12": {
+                "name": "dnssec",
+                "value": "None",
+                "corresponding_flag": "-z",
+                "description": "Performs a DNSSEC zone walk with standard enumeration.",
+                "param_needed": false,
+                "required": false,
+                "default": "None"
+            },
+            "13": {
+                "name": "threads",
+                "value": "None",
+                "corresponding_flag": "--threads",
+                "description": "Number of threads to use in reverse lookups, forward lookups, brute force and SRV record enumeration.",
+                "param_needed": true,
+                "required": false,
+                "default": "None"
+            },
+            "14": {
+                "name": "lifetime",
+                "value": "None",
+                "corresponding_flag": "--lifetime",
+                "description": "Time to wait for a server to response to a query.",
+                "param_needed": true,
+                "required": false,
+                "default": "None"
+            },
+            "15": {
+                "name": "use_tcp",
+                "value": "None",
+                "corresponding_flag": "--tcp",
+                "description": "Use TCP protocol to make queries.",
+                "param_needed": false,
+                "required": false,
+                "default": "None"
+            },
+            "16": {
+                "name": "sqllite_file",
+                "value": "None",
+                "corresponding_flag": "--db",
+                "description": "SQLite 3 file to save found records.",
+                "param_needed": true,
+                "required": false,
+                "default": "None"
+            },
+            "17": {
+                "name": "xml_file",
+                "value": "None",
+                "corresponding_flag": "-x",
+                "description": "XML file to save found records.",
+                "param_needed": true,
+                "required": false,
+                "default": "None"
+            },
+            "18": {
+                "name": "csv_file",
+                "value": "None",
+                "corresponding_flag": "-c",
+                "description": "Comma separated value file.",
+                "param_needed": true,
+                "required": false,
+                "default": "None"
+            },
+            "19": {
+                "name": "json_file",
+                "value": "None",
+                "corresponding_flag": "-j",
+                "description": "JSON file.",
+                "param_needed": true,
+                "required": false,
+                "default": "None"
+            },
+            "20": {
+                "name": "wildcard",
+                "value": "None",
+                "corresponding_flag": "--iw",
+                "description": "Continue brute forcing a domain even if a wildcard records are discovered.",
+                "param_needed": false,
+                "required": false,
+                "default": "None"
+            },
+            "21": {
+                "name": "verbose",
+                "value": "None",
+                "corresponding_flag": "-v",
+                "description": "Enable verbose in script",
+                "param_needed": false,
+                "required": false,
+                "default": "None"
+            }
+        },
+        "entry_class_name": null,
+        "return_filters": {
+            "0": {
+                "cid": 1,
+                "name": "A",
+                "replace": null,
+                "replace_with": null,
+                "replace_on_save": null,
+                "replace_on_save_with": null,
+                "regex": [
+                    "^(?:[-+.[\\W+]+\\b(?:(?!DNS|std|Enumerating)\\b))(?P<type>(A))\\s(?P<url>.*?)\\s(?P<ip>.*?)$"
+                ],
+                "sid": 0
+            },
+            "1": {
+                "cid": 1,
+                "name": "AAAA",
+                "replace": null,
+                "replace_with": null,
+                "replace_on_save": null,
+                "replace_on_save_with": null,
+                "regex": [
+                    "^(?:[-+.[\\W+]+\\b(?:(?!DNS|std|Enumerating)\\b))(?P<type>(AAAA))\\s(?P<url>.*?)\\s(?P<ip>.*?)$"
+                ],
+                "sid": 0
+            },
+            "2": {
+                "cid": 1,
+                "name": "NS",
+                "replace": null,
+                "replace_with": null,
+                "replace_on_save": null,
+                "replace_on_save_with": null,
+                "regex": [
+                    "^(?:[-+.[\\W+]+\\b(?:(?!DNS|std|Enumerating)\\b))(?P<type>(NS))\\s(?P<url>.*?)\\s(?P<ip>.*?)$"
+                ],
+                "sid": 0
+            },
+            "3": {
+                "cid": 1,
+                "name": "MX",
+                "replace": null,
+                "replace_with": null,
+                "replace_on_save": null,
+                "replace_on_save_with": null,
+                "regex": [
+                    "^(?:[-+.[\\W+]+\\b(?:(?!DNS|std|Enumerating)\\b))(?P<type>(MX))\\s(?P<url>.*?)\\s(?P<ip>.*?)$"
+                ],
+                "sid": 0
+            },
+            "4": {
+                "cid": 1,
+                "name": "SOA",
+                "replace": null,
+                "replace_with": null,
+                "replace_on_save": null,
+                "replace_on_save_with": null,
+                "regex": [
+                    "^(?:[-+.[\\W+]+\\b(?:(?!DNS|std|Enumerating)\\b))(?P<type>(SOA))\\s(?P<url>.*?)\\s(?P<ip>.*?)$"
+                ],
+                "sid": 0
+            },
+            "5": {
+                "cid": 1,
+                "name": "SRV",
+                "replace": null,
+                "replace_with": null,
+                "replace_on_save": null,
+                "replace_on_save_with": null,
+                "regex": [
+                    "^(?:[-+.[\\W+]+\\b(?:(?!DNS|std|Enumerating)\\b))(?P<type>(SRV))\\s(?P<service>.*?)\\s(?P<url>.*?)\\s(?P<ip>.*?)\\s(?P<port>.*?)$"
+                ],
+                "sid": 0
+            },
+            "6": {
+                "cid": 1,
+                "name": "TXT",
+                "replace": null,
+                "replace_with": null,
+                "replace_on_save": null,
+                "replace_on_save_with": null,
+                "regex": [
+                    "^(?:[-+.[\\W+]+\\b(?:(?!DNS|std|Enumerating)\\b))(?P<type>(TXT))\\s(?P<url>.*?)\\s(?P<data>.*?)$"
+                ],
+                "sid": 0
+            }
+        }
+    },
+    "package_for": {
+        "module": "github",
+        "submodule": "dns"
+    },
+    "report_design": {
+        "title": "Testing Dynamic",
+        "components": [
+            {
+                "id": 1,
+                "type": "table",
+                "properties": {
+                    "tableStyle": {
+                        "tableName": "Record Data",
+                        "showRecordCountInTitle": true,
+                        "groupOnNames": true,
+                        "dynamicTableNames": true,
+                        "paginationRowCount": 5,
+                        "showColumnToggle": true,
+                        "allowRowHighlight": true,
+                        "rowHighlightColor": "Colors.yellow",
+                        "filterTitle": "Filters",
+                        "headerStyle": {
+                            "textStyle": {
+                                "color": "Colors.blueGrey",
+                                "backgroundColor": "Colors.lightGreen",
+                                "fontSize": 20,
+                                "fontFamily": "Roboto",
+                                "fontWeight": "normal",
+                                "fontStyle": "italic",
+                                "padding": {
+                                    "top": 5,
+                                    "bottom": 5,
+                                    "right": 5,
+                                    "left": 5
+                                }
+                            }
+                        },
+                        "cellStyle": {
+                            "textStyle": {
+                                "color": "Colors.red",
+                                "fontSize": 15,
+                                "fontFamily": "Roboto",
+                                "fontWeight": "normal",
+                                "fontStyle": "italic",
+                                "padding": {
+                                    "top": 5,
+                                    "bottom": 5,
+                                    "right": 5,
+                                    "left": 5
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        ],
+        "slayouts": [
+            {
+                "title": "Some Section",
+                "sid": 0,
+                "order": "standard",
+                "direction": "column",
+                "addproperties": {
+                    "style": {
+                        "color": "Colors.red"
+                    }
+                }
+            }
+        ],
+        "layout": [
+            {
+                "rowID": 0,
+                "sids": [
+                    1
+                ]
+            },
+            {
+                "rowID": 1,
+                "sids": [
+                    0
+                ]
+            }
+        ]
+    }
+}

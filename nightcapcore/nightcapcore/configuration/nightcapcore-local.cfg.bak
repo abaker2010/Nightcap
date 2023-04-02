@@ -1,0 +1,43 @@
+[NIGHTCAPCORE]
+agreement = True
+logdir = logs
+verbose = True
+tor = False
+
+[BUILD_DATA]
+version = 0
+build = 1
+builddate = None
+main_branch = True
+
+[DOCKER]
+isDaemon=False
+ip = localhost
+port=2375
+containers=[{"service_name": "MongoDB", "container_name": "nightcapmongodb", "image_name": "mongo", "image_version": "latest", "manditory" : "True"},
+            {"service_name": "Ubuntu", "container_name": "nightcapubuntu", "image_name": "ubuntu", "image_version": "latest", "manditory" : "False"}]
+
+[MONGOSERVER]
+proc = None
+ip = localhost
+port = 27017
+db_name = nightcap
+username = mongodbadmin
+password = secret
+shutdown_on_exit = False
+
+[UBUNTU]
+proc = None
+ip = localhost
+port = 27018
+username = nightcap
+password = nightcap
+shutdown_on_exit = False
+
+[LANGS_SUPPORTED]
+python = {'enabled' : True, 'version' : '3.8.1'}
+ruby = {'enabled' : True, 'version' : '3.1.2'}
+go = {'enabled' : True, 'version' : '1.19'}
+rust = {'enabled' : True, 'version' : '1.64.0'}
+perl = {'enabled' : True, 'version' : '5.36.0'}
+

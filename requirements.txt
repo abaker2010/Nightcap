@@ -1,0 +1,24 @@
+wheel==0.38.2
+cmd2==2.4.2
+colorama==0.4.5
+configparser==5.2.0
+art==5.7
+tqdm==4.64.0
+pyreadline==2.1
+requests==2.28.1
+python-bsonjs==0.3.0
+prettytable==3.4.1
+GitPython==3.1.29
+flask-restful == 0.3.9
+flask-cors == 3.0.10
+
+# custom packages
+nightcapcore==0.0.1
+nightcappackages==0.0.1
+
+# Up grading this causes some issues
+# current version is pymongo==4.1.1
+pymongo==3.11.3
+
+# needs to be updated at somepoint
+pathlib==1.0.1
